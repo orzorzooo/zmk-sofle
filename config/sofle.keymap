@@ -41,6 +41,15 @@
         tap-ms = <30>;
     };
 
+    trickyESC: trickyESC {
+        compatible = "zmk,behavior-mod-morph";
+        label = "TRICKYESC";
+        bindings = <&kp ESCAPE>, <&kp TILDE>;
+
+        #binding-cells = <0>;
+        mods = <(MOD_LSFT)>;
+    };
+
     macros {
         switchLang: switchLang {
             compatible = "zmk,behavior-macro";
@@ -55,11 +64,11 @@
 
         layer0 {
             bindings = <
-&kp ESC     &kp N1         &kp N2        &kp N3        &kp N4            &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0     &kp BACKSPACE
-&kp TAB     &kp Q          &kp W         &kp E         &kp R             &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P      &kp BSLH
-&mo 3       &kp A          &kp S         &kp D         &kp F             &kp G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI   &kp ENTER
-&kp LSHFT   &kp Z          &kp X         &kp C         &kp V             &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH   &kp ENTER
-&kp C_MUTE  &kp LC(SPACE)  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE    &kp ENTER        &kp SPACE  &kp ENTER  &mo 2      &kp RIGHT_SHIFT  &kp LCTRL
+&trickyESC  &kp N1         &kp N2          &kp N3        &kp N4            &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0     &kp BACKSPACE
+&kp TAB     &kp Q          &kp W           &kp E         &kp R             &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P      &kp BSLH
+&mo 3       &kp A          &kp S           &kp D         &kp F             &kp G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI   &kp ENTER
+&kp LSHFT   &kp Z          &kp X           &kp C         &kp V             &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH   &mo 2
+&kp C_MUTE  &kp LC(SPACE)  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE    &kp ENTER        &kp SPACE  &kp ENTER  &mo 3      &kp RIGHT_SHIFT  &kp LCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -93,11 +102,11 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                &trans                 &trans          &trans           &trans      &trans  &trans     &trans          &trans        &trans     &trans         &trans
+&trans  &trans                &trans                 &kp UP_ARROW    &trans           &trans      &trans  &trans     &trans          &kp UP_ARROW  &trans     &trans         &trans
+&trans  &trans                &kp LEFT_ARROW         &kp DOWN        &kp RIGHT        &trans      &trans  &kp EQUAL  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp BACKSPACE  &trans
+&trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp PLUS    &trans  &kp MINUS  &trans          &trans        &trans     &trans         &trans
+&trans  &trans                &trans                 &trans          &trans           &trans      &trans  &trans     &trans          &trans        &trans     &trans
             >;
         };
     };
