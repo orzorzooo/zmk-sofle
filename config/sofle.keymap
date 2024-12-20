@@ -48,6 +48,14 @@
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
+    trickyBACKSLASH: trickyBACKSLASH {
+        compatible = "zmk,behavior-mod-morph";
+        label = "TRICKYESC";
+        bindings = <&kp BSLH>, <&kp GRAVE>;
+        #binding-cells = <0>;
+        mods = <(MOD_RSFT)>;
+    };
+
     macros {
         switchLang: switchLang {
             compatible = "zmk,behavior-macro";
@@ -62,8 +70,8 @@
 
         layer0 {
             bindings = <
-&trickyESC  &kp N1         &kp N2        &kp N3        &kp N4     &kp N5    &mmv MOVE_UP     &kp N6  &kp N7     &kp N8     &kp N9         &kp N0     &kp BSLH
-&kp TAB     &kp Q          &kp W         &kp E         &kp R      &kp T     &mmv MOVE_DOWN   &kp Y   &kp U      &kp I      &kp O          &kp P      &kp SINGLE_QUOTE
+&trickyESC  &kp N1         &kp N2        &kp N3        &kp N4     &kp N5    &mmv MOVE_UP     &kp N6  &kp N7     &kp N8     &kp N9         &kp N0     &trickyBACKSLASH
+&kp TAB     &kp Q          &kp W         &kp E         &kp R      &kp T     &mmv MOVE_DOWN   &kp Y   &kp U      &kp I      &kp O          &kp P      &kp BACKSPACE
 &mo 3       &kp A          &kp S         &kp D         &kp F      &kp G     &mmv MOVE_LEFT   &kp H   &kp J      &kp K      &kp L          &kp SEMI   &kp ENTER
 &kp LSHFT   &kp Z          &kp X         &kp C         &kp V      &kp B     &mmv MOVE_RIGHT  &kp N   &kp M      &kp COMMA  &kp DOT        &kp FSLH   &kp RSHFT 
 &kp C_MUTE  &kp LC(SPACE)  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE  &mo 3     &mkp LCLK         &mo 3   &kp SPACE  &kp ENTER  &kp BACKSPACE  &kp LCTRL
