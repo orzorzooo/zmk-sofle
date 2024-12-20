@@ -44,10 +44,10 @@
     trickyESC: trickyESC {
         compatible = "zmk,behavior-mod-morph";
         label = "TRICKYESC";
-        bindings = <&kp ESCAPE>, <&kp TILDE>;
+        bindings = <&kp ESCAPE>, <&kp TILDE>, <&kp GRAVE>;
 
         #binding-cells = <0>;
-        mods = <(MOD_LSFT)>;
+        mods = <(MOD_LSFT)>, <(MOD_LGUI)>;
     };
 
     macros {
