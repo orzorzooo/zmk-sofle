@@ -50,7 +50,7 @@
 
     trickyBACKSLASH: trickyBACKSLASH {
         compatible = "zmk,behavior-mod-morph";
-        label = "TRICKYESC";
+        label = "trickyBACKSLASH";
         bindings = <&kp BSLH>, <&kp GRAVE>;
         #binding-cells = <0>;
         mods = <(MOD_RSFT)>;
