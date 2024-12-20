@@ -37,7 +37,6 @@
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
         tap-ms = <30>;
     };
 
@@ -45,9 +44,8 @@
         compatible = "zmk,behavior-mod-morph";
         label = "TRICKYESC";
         bindings = <&kp ESCAPE>, <&kp TILDE>;
-
         #binding-cells = <0>;
-        mods = <(MOD_LSFT)>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
     macros {
@@ -64,16 +62,18 @@
 
         layer0 {
             bindings = <
-&trickyESC  &kp N1         &kp N2        &kp N3        &kp N4     &kp N5    &kp UP_ARROW     &kp N6  &kp N7     &kp N8     &kp N9         &kp N0     &kp BACKSPACE
-&kp TAB     &kp Q          &kp W         &kp E         &kp R      &kp T     &kp DOWN_ARROW   &kp Y   &kp U      &kp I      &kp O          &kp P      &kp BSLH
-&mo 3       &kp A          &kp S         &kp D         &kp F      &kp G     &kp LEFT_ARROW   &kp H   &kp J      &kp K      &kp L          &kp SEMI   &kp ENTER
-&kp LSHFT   &kp Z          &kp X         &kp C         &kp V      &kp B     &kp RIGHT_ARROW  &kp N   &kp M      &kp COMMA  &kp DOT        &kp FSLH   &mo 2
-&kp C_MUTE  &kp LC(SPACE)  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE  &mo 3     &kp ENTER        &mo 3   &kp SPACE  &kp ENTER  &kp BACKSPACE  &kp LCTRL
+&trickyESC  &kp N1         &kp N2        &kp N3        &kp N4     &kp N5    &mmv MOVE_UP     &kp N6  &kp N7     &kp N8     &kp N9         &kp N0     &kp BSLH
+&kp TAB     &kp Q          &kp W         &kp E         &kp R      &kp T     &mmv MOVE_DOWN   &kp Y   &kp U      &kp I      &kp O          &kp P      &kp SINGLE_QUOTE
+&mo 3       &kp A          &kp S         &kp D         &kp F      &kp G     &mmv MOVE_LEFT   &kp H   &kp J      &kp K      &kp L          &kp SEMI   &kp ENTER
+&kp LSHFT   &kp Z          &kp X         &kp C         &kp V      &kp B     &mmv MOVE_RIGHT  &kp N   &kp M      &kp COMMA  &kp DOT        &kp FSLH   &kp RSHFT 
+&kp C_MUTE  &kp LC(SPACE)  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE  &mo 3     &mkp LCLK         &mo 3   &kp SPACE  &kp ENTER  &kp BACKSPACE  &kp LCTRL
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+            sensor-bindings = <&scroll_encoder>;
             display-name = "LAYER0";
         };
+
+
 
         layer_1 {
             bindings = <
@@ -106,10 +106,24 @@
 &trans  &trans                &trans                 &trans          &trans           &trans      &mmv MOVE_DOWN   &trans     &trans            &trans             &trans     &kp MINUS         &kp EQUAL
 &trans  &trans                &trans                 &trans          &trans           &trans      &mmv MOVE_LEFT   &kp LEFT   &kp DOWN          &kp UP_ARROW       &kp RIGHT  &kp SINGLE_QUOTE  &trans
 &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp PLUS    &mmv MOVE_RIGHT  &kp MINUS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans     &trans            &trans
-&trans  &trans                &trans                 &trans          &trans           &trans      &mkp LCLK        &trans     &trans            &kp EQUAL          &trans     &trans
+&trans  &trans                &trans                 &trans          &trans           &trans      &mkp RCLK        &trans     &trans            &kp EQUAL          &trans     &mo 2
             >;
-
+            display-name = "orz-layer3";
             sensor-bindings = <&scroll_encoder>;
     };
+
+
+             layer_4 {
+            bindings = <
+&trickyESC  &kp N1         &kp N2        &kp N3        &kp N4     &kp N5    &mmv MOVE_UP     &kp N6  &kp N7     &kp N8     &kp N9         &kp N0     &kp BSLH
+&kp TAB     &kp Q          &kp W         &kp E         &kp R      &kp T     &mmv MOVE_DOWN   &kp Y   &kp U      &kp I      &kp O          &kp P      &kp SINGLE_QUOTE
+&mo 3       &kp A          &kp S         &kp D         &kp F      &kp G     &mmv MOVE_LEFT   &kp H   &kp J      &kp K      &kp L          &kp SEMI   &kp ENTER
+&kp LSHFT   &kp Z          &kp X         &kp C         &kp V      &kp B     &mmv MOVE_RIGHT  &kp N   &kp M      &kp COMMA  &kp DOT        &kp FSLH   &mo 2
+&kp C_MUTE  &kp LC(SPACE)  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE  &mo 3     &mkp LCLK         &mo 3   &kp SPACE  &kp ENTER  &kp BACKSPACE  &kp LCTRL
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+            display-name = "backup";
+        };
      };
 };
