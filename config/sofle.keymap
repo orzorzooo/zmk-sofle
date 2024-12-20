@@ -102,12 +102,14 @@
 
         layer_3 {
             bindings = <
-&trans  &trans                &trans                 &trans          &trans           &trans      &trans  &trans     &trans            &trans             &trans     &trans            &trans
-&trans  &trans                &trans                 &kp UP_ARROW    &trans           &trans      &trans  &trans     &trans            &kp UP_ARROW       &trans     &trans            &trans
-&trans  &trans                &kp LEFT_ARROW         &kp DOWN        &kp RIGHT        &trans      &trans  &kp EQUAL  &kp LEFT_ARROW    &kp DOWN           &kp RIGHT  &kp SINGLE_QUOTE  &trans
-&trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp PLUS    &trans  &kp MINUS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans     &trans            &trans
-&trans  &trans                &trans                 &trans          &trans           &trans      &trans  &trans     &trans            &trans             &trans     &trans
+&trans  &trans                &trans                 &trans          &trans           &trans      &mmv MOVE_UP      &trans     &trans            &trans             &trans     &trans            &trans
+&trans  &trans                &trans                 &kp UP_ARROW    &trans           &trans      &mmv MOVE_DOWN    &trans     &trans            &kp UP_ARROW       &trans     &trans            &trans
+&trans  &trans                &kp LEFT_ARROW         &kp DOWN        &kp RIGHT        &trans      &mmv MOVE_LEFT    &kp EQUAL  &kp LEFT_ARROW    &kp DOWN           &kp RIGHT  &kp SINGLE_QUOTE  &trans
+&trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp PLUS    &mmv MOVE_RIGHT   &kp MINUS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans     &trans            &trans
+&trans  &trans                &trans                 &trans          &trans           &trans      &mkp LCLK         &trans     &trans            &trans             &trans     &trans
             >;
+            display-name = "layer3";
+            sensor-bindings = <&scroll_encoder>;
         };
     };
 };
