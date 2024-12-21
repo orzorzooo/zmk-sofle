@@ -56,31 +56,18 @@
         mods = <(MOD_RSFT)>;
     };
 
-    macros {
-        switchLang: switchLang {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(SPACE)>;
-            label = "SWITCHLANG";
-        };
+    parenthesis: parenthesis {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LEFT_PARENTHESIS>,<&kp RIGHT_PARENTHESIS>,<&kp LEFT>;
+        label = "SWITCHLANG";
     };
 
-     macros {
-        parenthesis: parenthesis {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS>,<&kp RIGHT_PARENTHESIS>,<&kp LEFT>;
-            label = "SWITCHLANG";
-        };
-    };
-
-     macros {
-        brace: brace {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACE>,<&kp RIGHT_BRACE>,<&kp LEFT>;
-            label = "SWITCHLANG";
-        };
+    brace: brace {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LEFT_BRACE>,<&kp RIGHT_BRACE>,<&kp LEFT>;
+        label = "SWITCHLANG";
     };
 
     keymap {
