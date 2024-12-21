@@ -60,21 +60,21 @@
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings = <&kp LEFT_PARENTHESIS>,<&kp RIGHT_PARENTHESIS>,<&kp LEFT>;
-        label = "SWITCHLANG";
+        label = "parenthesis";
     };
 
     brace: brace {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings = <&kp LEFT_BRACE>,<&kp RIGHT_BRACE>,<&kp LEFT>;
-        label = "SWITCHLANG";
+        label = "brace";
     };
 
     escLang: escLang {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings = <&kp ESC>,<&kp LA(LG(J))>;
-        label = "SWITCHLANG";
+        label = "escLang";
     };
 
     keymap {
