@@ -65,6 +65,24 @@
         };
     };
 
+     macros {
+        parenthesis: parenthesis {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS>,<&kp RIGHT_PARENTHESIS>,<&kp LEFT>;
+            label = "SWITCHLANG";
+        };
+    };
+
+     macros {
+        brace: brace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACE>,<&kp RIGHT_BRACE>,<&kp LEFT>;
+            label = "SWITCHLANG";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -78,7 +96,7 @@
             >;
 
             sensor-bindings = <&scroll_encoder>;
-            display-name = "LAYER0";
+            display-name = "layer0";
         };
 
 
@@ -113,25 +131,25 @@
 &trans  &trans                &trans                 &trans          &trans           &trans      &mmv MOVE_UP     &trans     &trans            &trans             &trans     &trans            &trans
 &trans  &trans                &trans                 &trans          &trans           &trans      &mmv MOVE_DOWN   &trans     &trans            &trans             &trans     &kp MINUS         &kp EQUAL
 &trans  &trans                &trans                 &trans          &trans           &trans      &mmv MOVE_LEFT   &kp LEFT   &kp DOWN          &kp UP_ARROW       &kp RIGHT  &kp SINGLE_QUOTE  &trans
-&trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp PLUS    &mmv MOVE_RIGHT  &kp MINUS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans     &trans            &trans
+&trans  &parenthesis  &kp RIGHT_PARENTHESIS  &brace  &kp RIGHT_BRACE  &kp PLUS    &mmv MOVE_RIGHT  &kp MINUS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans     &trans            &trans
 &trans  &trans                &trans                 &trans          &trans           &trans      &mkp RCLK        &trans     &trans            &kp EQUAL          &trans     &mo 2
             >;
             display-name = "orz-layer3";
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
     };
 
 
-             layer_4 {
-            bindings = <
-&trickyESC  &kp N1         &kp N2        &kp N3        &kp N4     &kp N5    &mmv MOVE_UP     &kp N6  &kp N7     &kp N8     &kp N9         &kp N0     &kp BSLH
-&kp TAB     &kp Q          &kp W         &kp E         &kp R      &kp T     &mmv MOVE_DOWN   &kp Y   &kp U      &kp I      &kp O          &kp P      &kp SINGLE_QUOTE
-&mo 3       &kp A          &kp S         &kp D         &kp F      &kp G     &mmv MOVE_LEFT   &kp H   &kp J      &kp K      &kp L          &kp SEMI   &kp ENTER
-&kp LSHFT   &kp Z          &kp X         &kp C         &kp V      &kp B     &mmv MOVE_RIGHT  &kp N   &kp M      &kp COMMA  &kp DOT        &kp FSLH   &mo 2
-&kp C_MUTE  &kp LC(SPACE)  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE  &mo 3     &mkp LCLK         &mo 3   &kp SPACE  &kp ENTER  &kp BACKSPACE  &kp LCTRL
-            >;
+//              layer_4 {
+//             bindings = <
+// &trickyESC  &kp N1         &kp N2        &kp N3        &kp N4     &kp N5    &mmv MOVE_UP     &kp N6  &kp N7     &kp N8     &kp N9         &kp N0     &kp BSLH
+// &kp TAB     &kp Q          &kp W         &kp E         &kp R      &kp T     &mmv MOVE_DOWN   &kp Y   &kp U      &kp I      &kp O          &kp P      &kp SINGLE_QUOTE
+// &mo 3       &kp A          &kp S         &kp D         &kp F      &kp G     &mmv MOVE_LEFT   &kp H   &kp J      &kp K      &kp L          &kp SEMI   &kp ENTER
+// &kp LSHFT   &kp Z          &kp X         &kp C         &kp V      &kp B     &mmv MOVE_RIGHT  &kp N   &kp M      &kp COMMA  &kp DOT        &kp FSLH   &mo 2
+// &kp C_MUTE  &kp LC(SPACE)  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE  &mo 3     &mkp LCLK         &mo 3   &kp SPACE  &kp ENTER  &kp BACKSPACE  &kp LCTRL
+//             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-            display-name = "backup";
-        };
+//             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+//             display-name = "backup";
+//         };
      };
 };
