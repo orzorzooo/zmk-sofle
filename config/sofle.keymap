@@ -123,11 +123,11 @@
 
         layer_3 {
             bindings = <
-&trans  &kp F1                &kp F2                 &kp F3          &kp F4           &kp F5                    &mmv MOVE_UP     &kp F6                    &kp F7            &kp F8             &kp F9            &kp F10           &trans
-&trans  &trans                &trans                 &kp UP          &trans           &kp LEFT_BRACE            &mmv MOVE_DOWN   &kp RIGHT_BRACE           &trans            &trans             &trans            &trans            &kp DELETE
-&trans  &trans                &kp LEFT               &kp DOWN        &kp RIGHT        &kp LEFT_PARENTHESIS      &mmv MOVE_LEFT   &kp RIGHT_PARENTHESIS     &trans            &trans             &trans            &kp SINGLE_QUOTE  &trans
-&trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp PLUS                  &mmv MOVE_RIGHT  &kp MINUS                 &kp EQUAL         &kp LEFT_BRACKET   &kp RIGHT_BRACKET &kp GRAVE         &trans
-&trans  &trans                &trans                 &trans          &trans           &trans                    &mkp RCLK        &trans                    &trans            &kp EQUAL          &kp DELETE        &mo 2
+&trans  &kp F1   &kp F2      &kp F3      &kp F4     &kp F5        &mmv MOVE_UP     &kp F6                 &kp F7                &kp F8  &kp F9            &kp F10           &trans
+&trans  &trans   &trans      &kp UP      &trans     &kp PLUS      &mmv MOVE_DOWN   &kp LEFT_BRACE         &kp RIGHT_BRACE       &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET &kp DELETE
+&trans  &trans   &kp LEFT    &kp DOWN    &kp RIGHT  &kp MINUS     &mmv MOVE_LEFT   &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS &trans  &trans            &kp SINGLE_QUOTE  &trans
+&trans  &trans   &trans      &trans      &trans     &kp EQUAL     &mmv MOVE_RIGHT  &kp SINGLE_QUOTE       &trans                &trans  &trans            &trans            &trans
+&trans  &trans   &trans      &trans      &trans     &trans        &mkp RCLK        &trans                 &trans                &trans  &kp DELETE        &mo 2
             >;
             display-name = "orz-layer3";
             sensor-bindings = <&scroll_encoder>;
