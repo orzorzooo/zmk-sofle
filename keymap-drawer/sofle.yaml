@@ -63,7 +63,7 @@ layers:
   - std fn layer
   - $$mdi:keyboard-space$$
   - std fn layer
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-control$$
   '1':
   - {t: '$$mdi:transfer$$', type: trans}
