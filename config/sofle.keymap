@@ -94,6 +94,7 @@
 &trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
             >;
             sensor-bindings = <&scroll_encoder>;
+            display-name = "layer1";
         };
 
         layer_2 {
@@ -102,7 +103,7 @@
 &trans  &trans   &trans      &kp UP      &trans     &kp PLUS      &mmv MOVE_DOWN   &kp LEFT_BRACE         &kp RIGHT_BRACE       &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET &kp DELETE
 &trans  &trans   &kp LEFT    &kp DOWN    &kp RIGHT  &kp MINUS     &mmv MOVE_LEFT   &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS &trans  &trans            &kp SINGLE_QUOTE  &trans
 &trans  &trans   &trans      &trans      &trans     &kp EQUAL     &mmv MOVE_RIGHT  &kp SINGLE_QUOTE       &trans                &trans  &trans            &trans            &trans
-&trans  &trans   &trans      &trans      &trans     &trans        &mkp RCLK        &trans                 &trans                &trans  &kp DELETE        &mo 1
+&trans  &trans   &trans      &trans      &trans     &trans        &mkp RCLK        &trans                 &trans                &trans  &mo 1             &mo 1
             >;
             display-name = "std fn layer";
             sensor-bindings = <&scroll_encoder>;
