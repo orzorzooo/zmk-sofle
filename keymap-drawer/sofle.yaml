@@ -1,4 +1,4 @@
-layout: {qmk_keyboard: sofle/rev1}
+layout: {zmk_keyboard: sofle}
 layers:
   layer0:
   - {t: '$$mdi:keyboard-esc$$', s: '~'}
@@ -65,7 +65,7 @@ layers:
   - std fn layer
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-control$$
-  '1':
+  layer1:
   - {t: '$$mdi:transfer$$', type: trans}
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
@@ -193,5 +193,5 @@ layers:
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
-  - $$mdi:backspace-reverse-outline$$
-  - '1'
+  - layer1
+  - layer1
